@@ -20,7 +20,7 @@ const ProfitGenerating = () => {
                         <img src="/comma.png" alt="" className='absolute -top-4 bg-[#FDF3EA]' />
                         <p className="font-['inter'] font-medium italic text-[16px] leading-[30px] tracking-[0%] align-middle text-black">It's like Klaviyo for direct mail. The results are absolutely insane.</p>
                         <div className='flex justify-between'>
-                            <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle">Ash Melwani, CMO</p>
+                            <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle text-black">Ash Melwani, CMO</p>
                             <img src="/obvi-logo.png" alt="" />
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const ProfitGenerating = () => {
                             <img src="/comma.png" alt="" className='absolute -top-4 bg-[#FDF3EA]' />
                             <p className="font-['inter'] font-medium italic text-[16px] leading-[30px] tracking-[0%] align-middle text-black">PostPilot is our new weapon against sinking email engagement and rising PPC costs. The results and ROI have been outstanding. It’s now one of our core marketing channels to increase acquisition & LTV.</p>
                             <div className='flex justify-between'>
-                                <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle">Leah Keith, GM</p>
+                                <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle text-black">Leah Keith, GM</p>
                                 <img src="/tiger.png" alt="" />
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const ProfitGenerating = () => {
                         <img src="/comma.png" alt="" className='absolute -top-4 bg-[#FDF3EA]' />
                         <p className="font-['inter'] font-medium italic text-[16px] leading-[30px] tracking-[0%] align-middle text-black">The team is so knowledgeable and beyond helpful. I’m blown away by their communication, detail, and attentiveness and always feel like they have our best interest in mind. Definitely worth a try.</p>
                         <div className='flex justify-between'>
-                            <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle">Holly Davies, Marketing Director</p>
+                            <p className="font-['roboto'] font-normal text-[14px] leading-[22px] tracking-[0%] align-middle text-black">Holly Davies, Marketing Director</p>
                             <img src="/paragon.png" alt="" />
                         </div>
                     </div>

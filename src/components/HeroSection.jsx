@@ -12,7 +12,7 @@ const HeroSection = () => {
             {/* left-content */}
             <div className='w-[60%] flex justify-end'>
                 <div className='max-w-[800px] '>
-                    <h1 className='font-inter font-bold text-[82px] leading-[96px] tracking-[0%]'>Meet your <br />
+                    <h1 className='font-inter font-bold text-[82px] leading-[96px] tracking-[0%] text-black'>Meet your <br />
                         <span className="font-['Covered_By_Your_Grace'] font-normal text-[#009387]">favorite</span> new (old) marketing channel.</h1>
                     <p className="font-inter font-medium text-[20px] leading-[34px] tracking-[0%] my-4"
                     >Remarkable results. Easier than email. Postcard marketing reinvented for modern ecommerce.</p>

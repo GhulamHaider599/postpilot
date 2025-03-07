@@ -3,6 +3,9 @@ import Container from './Container'
 
 const Footer = () => {
   return (
+    <div className='bg-white'>
+
+
     <Container className='py-20' >
       <div className='flex gap-[128px] mb-15' id='contact'  >
         <div className='w-[30%] '>
@@ -54,13 +57,14 @@ const Footer = () => {
           <p>© 2022 PostPilot, Inc. All rights reserved.</p>
         </div>
         <div className='space-x-2'>
-          <button className='border-2 border-[#2E2F35] px-[25px] py-[14px]  rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-[#2E2F35] hover:bg-gray-600 hover:text-white transition-colors duration-300'>Login</button>
+          <button className='border-2 border-[#2E2F35] px-[25px] py-[14px]  rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-[#2E2F35] bg-white hover:bg-gray-600 hover:text-white transition-colors duration-300'>Login</button>
 
           <button className='border-2 border-[#2E2F35] px-[25px] py-[14px] rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] bg-[#ff6d2c] hover:bg-[#2cffca] hover:text-black transition-colors duration-300 font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-white'>Create free account</button>
 
         </div>
       </div>
     </Container>
+    </div>
   )
 }
 

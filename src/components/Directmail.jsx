@@ -6,26 +6,26 @@ const Directmail = () => {
         <div className='py-14 bg-[#E0F8F2]' id='workflow'>
 
             <Container>
-                <h2 className="font-inter font-bold text-[63px] leading-[76px] tracking-[-2px] text-center"
+                <h2 className="font-['inter'] font-bold text-[63px] leading-[76px] tracking-[-2px] text-center text-black"
                 >Why use direct mail? <br />It 
                     <span className="font-['Covered_By_Your_Grace'] font-normal text-[#009387] "> works</span> like crazy.</h2>
                 {/* Below Content */}
                 <div className='flex gap-13 items-center mt-[30px]'>
                     <div className='w-1/3 '>
-                            <h3 className="font-inter font-bold text-[63px] leading-[75px] tracking-[-2px] text-center align-middle"
+                            <h3 className="font-['inter'] font-bold text-[63px] leading-[75px] tracking-[-2px] text-center align-middle text-black"
                             >28X</h3>
-                            <p className="font-inter font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle"
+                            <p className="font-['inter'] font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle text-black"
                             >Higher response rate than email & digital</p>
                     </div>
                     <div className='w-1/3  flex flex-col  items-center'>
                             <img src="/direct-mail.png"   alt="" />
-                            <p className="font-inter font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle"
+                            <p className="font-['inter'] font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle text-black"
                             >Your messages get read</p>
                     </div>
                     <div className='w-1/3 '>
-                        <h3 className="font-inter font-bold text-[62px] leading-[75px] tracking-[-2px] text-center align-middle"
+                        <h3 className="font-['inter'] font-bold text-[62px] leading-[75px] tracking-[-2px] text-center align-middle text-black"
                         >17 Days</h3>
-                        <p className="font-inter font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle"
+                        <p className="font-['inter'] font-medium text-[14px] leading-[22px] tracking-[0%] text-center align-middle text-black"
                         >Lifespan of a postcard vs. seconds for email or SMS</p>
                     </div>
                 </div>

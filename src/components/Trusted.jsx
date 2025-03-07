@@ -39,7 +39,7 @@ const Trusted = () => {
     ];
 
     return (
-        <div id='clients'>
+        <div id='clients bg-white'>
 
         <Container className="py-14 relative" >
             <h2 className="font-['inter'] font-bold text-[63px] leading-[76px] tracking-[-2px] text-center mb-3"

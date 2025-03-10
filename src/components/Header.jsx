@@ -1,16 +1,35 @@
 
 "use client";
-import { useState } from "react";
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 import Container from './Container'
 import Link from 'next/link'
+import AuthModal from './AuthModal';
 
-import LoginModal from "./LoginModal"; // Import the modal
-import RegisterModal from "./RegisterModal";
 const Header = () => {
-    // const [isOpen, setIsOpen] = useState(false);
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
-    const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [authType, setAuthType] = useState("login");
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        // Check if the user is already logged in or registered
+        const storedUser = JSON.parse(localStorage.getItem("userData"));
+
+        if (storedUser) {
+            setUser(storedUser);  // Set the logged-in user's info
+        }
+        // const timer = setTimeout(() => {
+           
+        //     setModalOpen(true);
+           
+        // }, 3000);
+
+        return () => clearTimeout(timer); // Cleanup the timer when the component is unmounted
+    }, []);
+    const handleLogout = () => {
+        setUser(null);  // Clear user from state
+        // setModalOpen(true);
+    };
     return (
         <nav className=' fixed top-0 left-0 w-full bg-white shadow-md z-50'>
 
@@ -43,13 +62,26 @@ const Header = () => {
                             </li>
 
                         </ul>
-                        {/* buttons */}
-                        <button onClick={() => setIsLoginOpen(true)} className='border-2 border-[#2E2F35] px-[25px] py-[14px]  rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-[#2E2F35] hover:bg-gray-600 hover:text-white transition-colors duration-300'>Login</button>
-                        {/* Render the LoginModal when needed */}
-                        <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+                        {/* Conditionally render buttons based on user state */}
+                        {user ? (
+                            <div className='flex items-center gap-4'>
+                            <span className='text-red-700 font-bold text-lg'>Hello, {user.username}</span>
+                                <button
+                                     onClick={handleLogout} 
+                                    className='border-2 border-[#2E2F35] px-[25px] py-[14px] rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-[#2E2F35] hover:bg-gray-600 hover:text-white transition-colors duration-300'>
+                                    Logout
+                                </button>
+                            </div>
+                        ) : (
+                            <div className='flex items-center gap-4'>
+                            <button onClick={() => { setAuthType("login"); setModalOpen(true); }} className='border-2 border-[#2E2F35] px-[25px] py-[14px]  rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-[#2E2F35] hover:bg-gray-600 hover:text-white transition-colors duration-300'>Login</button>
 
-                        <button onClick={() => setIsRegisterOpen(true)} className='border-2 border-[#2E2F35] px-[25px] py-[14px] rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] bg-[#ff6d2c] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-white hover:bg-[#2cffca] hover:text-black transition-colors duration-300'>Create free account</button>
-                        <RegisterModal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />
+                            <button onClick={() => { setAuthType("signup"); setModalOpen(true); }} className='border-2 border-[#2E2F35] px-[25px] py-[14px] rounded-2xl shadow-[3px_3px_0px_0px_#2E2F35] bg-[#ff6d2c] font-inter font-medium text-[15px] leading-[18px] tracking-[0%] text-center text-white hover:bg-[#2cffca] hover:text-black transition-colors duration-300'>Create free account</button>
+                            </div>
+                        ) 
+                         }
+                     
+                        <AuthModal open={modalOpen} onClose={() => setModalOpen(false)} type={authType} setAuthType={setAuthType}  />
                     </div>
                 </div>
             </Container>
@@ -58,3 +90,5 @@ const Header = () => {
 }
 
 export default Header
+
+
